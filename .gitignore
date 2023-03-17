@@ -3,3 +3,4 @@ derby.log
 data_in
 metastore_db
 /.idea
+/data_out/
