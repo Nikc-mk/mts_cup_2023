@@ -5,3 +5,4 @@ metastore_db
 /.idea
 /data_out/
 /catboost_info/
+/predict/
