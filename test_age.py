@@ -13,10 +13,10 @@ TARGET_FILE = 'data_in/public_train.pqt'
 
 data = pq.read_table(f"{DATA_FILE}").to_pandas()
 
-data_1 = pq.read_table(f"data_in/count_usr_emb_f50_i30.parquet").to_pandas()
+data_1 = pq.read_table(f"data_in/transform_usr_emb_f80_i50.parquet").to_pandas()
 data = data.merge(data_1, how='left', on=['user_id'])
-data_2 = pq.read_table(f"data_in/night_bas_usr_emb_f20_i50.parquet").to_pandas()
-data = data.merge(data_2, how='left', on=['user_id'])
+# data_2 = pq.read_table(f"data_in/night_bas_usr_emb_f20_i50.parquet").to_pandas()
+# data = data.merge(data_2, how='left', on=['user_id'])
 
 data = data.fillna(0)
 
