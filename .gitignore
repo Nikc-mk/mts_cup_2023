@@ -6,3 +6,4 @@ metastore_db
 /data_out/
 /catboost_info/
 /predict/
+/venv/
