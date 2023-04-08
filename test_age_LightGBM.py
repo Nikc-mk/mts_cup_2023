@@ -46,7 +46,7 @@ print(data_t_age['age'].value_counts())
 x_train, x_test, y_train, y_test = train_test_split(
     data_t_age.drop(['user_id', 'age', 'is_male'], axis=1), data_t_age['age'], test_size=0.25, random_state=SPLIT_SEED)
 
-clf_age = LGBMClassifier(n_jobs=4, objective='multiclass', num_class=6, num_iterations=2000
+clf_age = LGBMClassifier(n_jobs=6, objective='multiclass', num_class=6, num_iterations=1000
                          , metric='multi_logloss', is_unbalance=True)
 clf_age.fit(x_train, y_train, verbose=False)
 print(m.classification_report(y_test, clf_age.predict(x_test),
